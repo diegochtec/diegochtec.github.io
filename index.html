@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tarea NLP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <style>
+      table {
+        width: 80%;
+        border: 1px solid #000;
+      }
+      th, td {
+        width: 5%;
+        text-align: left;
+        vertical-align: top;
+        border: 1px solid #000;
+        border-collapse: collapse;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity"></script>
+</head>
+
+<body>
+  <div id='main'>
+    <h1>Detector de Toxicidad</h1>
+    <div class="description">Inserte un comentario en inglés</div>
+
+    <input id="classify-new-text-input" required="Se necesita que ingrese un comentario">
+    <input id="button" value="Detectar" type="submit" onclick="predict()">
+    <div id="table">
+      <table id="toxicityTable" class="default">
+        <tr>
+          <th scope="row">Comentario</th>
+          <th>Ataque a la identidad</th>
+          <th>Insulto</th>
+          <th>Obscenidad</th>
+          <th>Toxicidad severa</th>
+          <th>Sexualmente explícito</th>
+          <th>Amenaza</th>
+          <th>Toxicidad</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
